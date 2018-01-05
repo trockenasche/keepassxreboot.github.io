@@ -1,0 +1,19 @@
+---
+layout: pages
+---
+
+<div class="docpage wrapper">
+  <header>
+    <h4>Wiki</h4>
+    <p>
+    {% for post in site.posts %}
+    {% unless post.categories contains 'blog' %}
+        <a href="{{ post.url }}">{{ post.title }}</a><br/>
+    {% endunless %}
+    {% endfor %}
+    </p>
+  </header>
+  <section>
+    {{ content }}
+  </section>
+</div>

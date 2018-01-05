@@ -24,6 +24,9 @@
     {% endif %}
     <!-- Custom styles for this template -->
     <link href="{{ site.baseurl }}/css/main.min.css?201712141015" rel="stylesheet">
+    {% if page.path contains "docs" %}
+    <link href="{{ site.baseurl }}/css/docpage.css?201712141015" rel="stylesheet">
+    {% endif %}
     <link rel="canonical" href="https://keepassxc.org{{ page.url }}"/>
     {% if page.path contains "blog" %}
     <link type="application/atom+xml" rel="alternate" href="{{ site.baseurl }}/blog/feed.xml"/>
